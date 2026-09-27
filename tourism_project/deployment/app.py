@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 import os
 
-# Define model path
+# Define model path (relative to the app.py file)
 MODEL_PATH = "xgboost_model.pkl"
 
 # Load the trained model
@@ -34,7 +34,7 @@ if model:
     numberofpersonvisiting = st.slider("Number of Persons Visiting", 1, 6, 2)
     preferredpropertystar = st.slider("Preferred Property Star Rating", 3, 5, 4)
     maritalstatus = st.selectbox("Marital Status", ['Single', 'Married', 'Divorced'])
-    numberoftrips = st.slider("Number of Trips Annually", 0, 20, 5)
+    numberoftrips = st.slider("NumberOfTrips Annually", 0, 20, 5)
     passport = st.selectbox("Has Passport", [0, 1], format_func=lambda x: 'Yes' if x == 1 else 'No')
     owncar = st.selectbox("Owns Car", [0, 1], format_func=lambda x: 'Yes' if x == 1 else 'No')
     numberofchildrenvisiting = st.slider("Number of Children Visiting", 0, 3, 0)
