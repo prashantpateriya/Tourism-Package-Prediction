@@ -4,8 +4,8 @@ import pandas as pd
 import joblib
 import os
 
-# Define model path (relative to the app.py file)
-MODEL_PATH = "xgboost_model.pkl"
+# Define model path (absolute path from repository root)
+MODEL_PATH = "tourism_project/deployment/xgboost_model.pkl"
 
 # Load the trained model
 @st.cache_resource
